@@ -1,0 +1,279 @@
+.projects-section {
+  text-align: center;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+}
+
+.projects-section .subtitle {
+  color: #2d64f2;
+  font-weight: 600;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.projects-section .title {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.projects-section .description {
+  font-size: 22px;
+  color: #777;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h5 {
+  color: #2d64f2;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.stat-box .stat-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: #111;
+}
+
+.cta-btn {
+  background: linear-gradient(90deg, #0d47a1, #2d64f2);
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(90deg, #2d64f2, #0d47a1);
+}
+
+.project-showcase {
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+}
+/* Whole Section Wrapper */
+.project-showcase {
+  padding-block: 100px;   /* Section ke upar & neeche equal space */
+}
+
+/* Container */
+.project-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;             /* Text aur image ke beech ka space */
+  padding-inline: 80px;   /* Left/right padding */
+  max-width: 1300px;      /* Center align ke liye */
+  margin: 0 auto;         /* Center me fix */
+}
+
+/* Layout Direction */
+.project-container.normal {
+  flex-direction: row;          /* Text Left, Image Right */
+}
+
+.project-container.reverse {
+  flex-direction: row-reverse;  /* Image Left, Text Right */
+}
+
+/* Text Box */
+.project-text-box {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Subtitle */
+.project-subtitle {
+  color: #2d64f2;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.project-title {
+  font-size: 47px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #111;
+  line-height: 1.3;
+}
+
+/* Description */
+.project-description {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+/* Button */
+.project-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 2px solid #2d64f2;
+  border-radius: 8px;
+  color: #2d64f2;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-btn:hover {
+  background: #2d64f2;
+  color: #fff;
+}
+
+/* Image */
+.project-image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.project-image-box img {
+  max-width: 100%;
+  border-radius: 14px;
+  box-shadow: 0px 12px 24px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .project-container {
+    flex-direction: column !important;
+    text-align: center;
+    padding-inline: 20px;
+    gap: 50px;
+  }
+
+  .project-text-box {
+    max-width: 100%;
+  }
+
+  .project-subtitle {
+    text-align: center !important;
+  }
+
+  .project-title {
+    font-size: 32px;
+  }
+
+  .project-description {
+    font-size: 18px;
+  }
+}
+
+
+
+
+.testimonial-section {
+  text-align: center;
+  padding: 60px 80px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.subtitle {
+  color: #2663eb;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px 30px;
+  max-width: 380px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profile span {
+  font-size: 13px;
+  color: #777;
+}
+
+.testimonial-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1.5px solid #2663eb;
+  color: #2663eb;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #2663eb;
+  color: #fff;
+}

@@ -1,0 +1,33 @@
+.custom-highlight {
+    background: linear-gradient(90deg, #2C07FF, #000E3B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+  
+  /* On hover, scale the text */
+  .custom-highlight:hover {
+    transform: scale(1.8);
+  }
+
+
+  .gradient-outline-btn {
+    background: transparent;
+    color: black;
+    font-size: 12px;
+    padding: 8px 24px;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, #2C07FF, #000E3B); 
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .gradient-outline-btn:hover {
+    background: linear-gradient(to right,#2C07FF, #000E3B);
+    color: white;
+  }

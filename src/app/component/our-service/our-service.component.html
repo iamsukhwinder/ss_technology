@@ -1,0 +1,102 @@
+<div class="container py-5">
+  <div class="text-center mb-5">
+    <h2>Our <span class="text-primary">Services</span></h2>
+    <p class="text-muted">We Provide Perfect IT Solutions For Your Business</p>
+  </div>
+
+  <!-- <div class="row services-box">
+    <div class="col-md-3" *ngFor="let service of mainServices; let i = index">
+      <div class="service-card" [class.shadow]="i === 1">
+        <div class="service-icon bg-info">
+          <i [class]="service.icon + ' text-white'"></i>
+        </div>
+        <h5 class="mt-3">{{ service.title }}</h5>
+        <p class="text-muted">{{ service.description }}</p>
+        <a href="#" class="learn-more"
+          >Learn More <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container text-center mt-4">
+    <div class="row" *ngFor="let group of websiteTypesGrouped">
+      <div class="col-6 col-md-3 service-type" *ngFor="let type of group">
+        <i [class]="type.icon"></i>
+        <h6>{{ type.title }}</h6>
+        <p class="text-muted">{{type.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grow-business container text-center my-5">
+  <h2>How To Grow Your <span class="highlight">Business</span></h2>
+  <p class="subtitle">
+    Class aptent taciti sociosqu ad litora torquen conubia nostra inceptos
+    himenaeos. Phasellus metus nisl euismod eget lorem.
+  </p>
+
+  <div class="row mt-4 justify-content-center">
+    <div class="col-md-4 mb-4" *ngFor="let card of growBusinessCards">
+      <div class="business-card position-relative">
+        <img [src]="card.image" alt="card image" class="img-fluid" />
+
+        <div class="overlay">
+          <div>
+            <h5>{{ card.title }}</h5>
+            <p class="desc">{{ card.description }}</p>
+            <!-- Show on hover -->
+          </div>
+          <span class="icon"><i [class]="card.icon"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="about-agency container mt-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center">
+      <img src="Assets/circle.jpg" alt="Agency Image" class="img-fluid" />
+    </div>
+    <div class="col-md-6">
+      <h6>About Agency</h6>
+      <h2>
+        We’re Top Notch & Best<br />
+        Web Design & SEO<br />
+        Agency
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Metus vitae a aenean mi aenean
+        nulla elementum eget viverra. Tellus phasellus velit aliquam.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Sagittis dignissim et tortor
+        sem. Ut tempor velit magna aliquet dignissim in purus molestie congue.
+      </p>
+      <button class="gradient-outline-btn">Discover</button>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+ <div class="grid-container">
+    <!-- <div class="grid-item">Web Design Development</div>
+    <div class="grid-item"><img src="Assets/image.jpg" alt=""></div>
+    <div class="grid-item"><img src="Assets/image2.jpg" alt=""></div> -->
+
+    <!-- <div class="grid-item wide">
+      <div>
+        <p>Now code, testing,<br> and debug directly on<br> the platform</p>
+      </div>
+      <img src="Assets/contact.jpg" alt="" style="max-width:50%; border-radius:10px;">
+    </div>
+
+    <div class="grid-item"><img src="Assets/photo.jpg" alt=""></div>
+    <div class="grid-item"><img src="Assets/istockphoto.jpg" alt=""></div> -->
+    
+  </div>

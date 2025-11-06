@@ -1,0 +1,47 @@
+<section class="blogs-wrap">
+  <p class="eyebrow">OUR BLOGS</p>
+  <h2 class="title">{{ heading }}</h2>
+  <p class="subtitle">
+    Our blogs are written from research and known writers so the best posts are easy to read all along.
+  </p>
+
+  <div class="grid">
+    <article class="card" *ngFor="let b of blogs">
+<a [href]="b.link" class="image-link" [attr.aria-label]="b.title">
+
+        <img [src]="b.image" [alt]="b.title" loading="lazy" />
+      </a>
+
+      <div class="meta-row">
+        <span class="category">{{ b.category }}</span>
+        <span class="dot">•</span>
+        <span class="date">{{ b.date }}</span>
+      </div>
+
+      <h3 class="card-title">
+        <a [href]="b.link">{{ b.title }}</a>
+      </h3>
+
+      <p class="excerpt">{{ b.excerpt }}</p>
+
+      <a class="read-more" [href]="b.link">Read More…</a>
+    </article>
+  </div>
+</section>
+
+
+
+<div class="section-container">
+    <h1>Ready To Use Our App With No <br> Hidden Malware</h1>
+    <p>Etiam euismod volutpat lacus fringilla henr. Mauris lobortis purus velit quis. 
+       Nunc mollis venenatis metus nec aliquet.</p>
+    <div class="signin">
+      Already a member? <a href="#">Sign In</a>
+    </div>
+    <div class="form-box">
+      <input type="email" placeholder="Enter your email address">
+      <button>Try Free</button>
+    </div>
+  </div>
+
+ <app-footer></app-footer>

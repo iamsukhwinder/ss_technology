@@ -1,0 +1,678 @@
+/* app.component.css */
+.main-container {
+    width: 100%;
+    position: relative; /* Needed for absolute positioning of child */
+   /* Ensure container takes full viewport height */
+    overflow: hidden;
+  }
+  
+  .left-text {
+    position: absolute;
+    left: 5%;
+    top:65%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  .left-text h2 {
+    font-size: 6.5rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #9F9F9F; /* Adjust color as needed */
+    white-space: pre-line;
+    width: 60%;
+  }
+  
+  .image-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .image-container {
+    width: 75%;
+  }
+  
+  .right-aligned-image {
+    width: 100%;
+    height: 600px;
+    display: block;
+  }
+
+  .gradient-btn {
+    background: linear-gradient(to right, #3a00ff, #000428); /* Adjust gradient if needed */
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+  }
+  
+  .gradient-btn:hover {
+    opacity: 0.9;
+  }
+
+  button{
+margin-top: 60px
+  }
+
+
+  .gradient-outline-btn {
+    background: transparent;
+    color: black;
+    font-size: 12px;
+    padding: 8px 24px;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, #2C07FF, #000E3B); 
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .gradient-outline-btn:hover {
+    background: linear-gradient(to right,#2C07FF, #000E3B);
+    color: white;
+  }
+
+
+  .scroller-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+   
+ 
+  }
+  
+  .scroller-heading {
+    display: inline-block;
+    min-width: 100%;
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(46, 46, 105);
+    animation: ping-pong-scroll 10s linear 1s infinite alternate;
+&:hover { animation-play-state: paused; }
+  
+  }
+  
+
+
+
+.why-choose-container {
+  padding-inline: 50px;   /* left & right padding */
+  padding-block: 40px;    /* optional top & bottom padding */
+ 
+}
+
+
+.report-section-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.report-item {
+  flex: 1 1 30%;
+  min-width: 220px;
+}
+
+.report-label {
+  color: #444;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.report-value {
+  color: #293241;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+
+ .reviews-wrapper {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .reviews-wrapper h2 {
+      font-size: 32px;
+      color: #0d2d8c;
+      margin-bottom: 40px;
+    }
+    /* Feedback cards */
+    .reviews-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+    .feedback-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      max-width: 400px;
+      text-align: left;
+    }
+    .feedback-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+    .feedback-header img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+    .feedback-header h4 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .feedback-header span {
+      font-size: 13px;
+      color: gray;
+    }
+    .feedback-card p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+      position: relative;
+    }
+    .feedback-card p::before {
+      content: "❝";
+      font-size: 24px;
+      color: #999;
+      margin-right: 6px;
+    }
+    .feedback-card p::after {
+      content: "❞";
+      font-size: 24px;
+      color: #999;
+      margin-left: 6px;
+    }
+    /* Profile row below */
+    .reviewer-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .reviewer {
+      text-align: center;
+    }
+    .reviewer img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .stars {
+      color: gold;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .reviewer h4 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .reviewer span {
+      display: block;
+      font-size: 13px;
+      color: gray;
+    }
+    .highlighted h4 {
+      color: #6c2eb9; 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes ping-pong-scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+
+
+
+
+
+  .custom-icon {
+    font-size: 48px;
+    color: #ffb907;
+    margin-bottom: 20px;
+  }
+  
+
+  .custom-services-header {
+    text-align: center;
+    padding: 20px 20px;
+   
+  }
+  
+  .custom-services-title {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .custom-subtitle {
+    color: #ababab;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 12px;
+  }
+  
+  .custom-services-title h2 {
+    font-size: 60px;
+    font-weight:700;
+    line-height: 1.3;
+    color: #b7b7b7;
+  }
+  
+  .custom-highlight {
+    background: linear-gradient(90deg, #2C07FF, #000E3B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+  }
+  
+  /* On hover, scale the text */
+  .custom-highlight:hover {
+    transform: scale(1.8);
+  }
+  .custom-icon {
+    font-size: 48px;
+    color: #ff7707;
+    margin-bottom: 20px;
+    animation: pulseGlow 2s infinite ease-in-out;
+  }
+  
+  /* Animation keyframes */
+  @keyframes pulseGlow {
+    0% {
+      text-shadow: 0 0 5px #ff9c07, 0 0 10px #e1d769;
+      transform: scale(1);
+    }
+    50% {
+      text-shadow: 0 0 15px #ffde07, 0 0 30px #ff7206;
+      transform: scale(1.1);
+    }
+    100% {
+      text-shadow: 0 0 5px #ff9c07, 0 0 10px #ffa407;
+      transform: scale(1);
+    }
+  }
+  
+  
+  
+
+
+
+
+
+  .services-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #000000;
+  }
+
+
+
+  .highlight {
+    background: linear-gradient(90deg, #2C07FF, #000E3B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    
+  }
+  
+  .high {
+  text-align: center;       /* text ko center karega */
+  max-width: 800px;         /* optional: width limit */
+  margin: 0 auto 40px auto; /* center horizontally aur neeche space */
+  padding-inline: 20px;     /* thoda side padding for responsiveness */
+}
+
+  
+  
+  .section-title .subtitle {
+    color: #aaa;
+    letter-spacing: 1px;
+    font-size: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 10px;
+    line-height: 1.4;
+    color: #f9f9f9;
+  }
+  
+  .section-title .highlight {
+    color: #ff8c00;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+
+  }
+  
+  .service-card {
+    background-color: #1a1a1a;
+    padding: 30px 20px; 
+    border-radius: 8px;
+    width: 230px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+  }
+  .service-card {
+    background-color: #1a1a1a;
+    padding: 30px 20px;
+    border-radius: 8px;
+    width: 250px; /* Slightly bigger */
+    height: 352px; /* Fixed height to align buttons */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push button to bottom */
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  .service-card button {
+    margin-top: auto; /* Push button to bottom */
+    padding: 10px 25px;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    align-self: flex-start;
+  }
+  
+  .service-card button:hover {
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .service-card:hover { 
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1); 
+  }
+  
+  .service-card img {
+    width: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .service-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+    transition: all 0.3s ease;
+    text-align: left;
+    width: 100%;
+  }
+  
+
+
+
+  .service-card p {
+    color: #bbb;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    text-align: left;
+    width: 100%;
+  }
+  .service-card i {
+    font-size: 60px;
+    color: #fff;
+    transition: all 0.4s ease;
+    display: inline-block;
+    transform: scale(1);
+    margin-bottom: 15px;
+  }
+  
+  /* Web card icon gradient + zoom */
+  .web-card:hover i {
+    background: linear-gradient(45deg, rgb(0, 183, 255), rgb(0, 86, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2); /* icon grows */
+  }
+  
+  /* UI card icon gradient + zoom */
+  .ui-card:hover i {
+    background: linear-gradient(45deg, rgb(255, 0, 172), rgb(255, 128, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+  }
+  
+  /* API card icon gradient + zoom */
+  .api-card:hover i {
+    background: linear-gradient(45deg, rgb(0, 255, 128), rgb(0, 209, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+  }
+  
+  /* Mobile card icon gradient + zoom */
+  .mobile-card:hover i {
+    background: linear-gradient(45deg, rgb(255, 0, 0), rgb(255, 111, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+  }
+  
+  
+
+
+
+
+
+
+.container {
+  padding-block: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  padding: 30px;
+  text-align: center; /* Center text by default */
+}
+
+.about-text .title {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+
+
+.about-text p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto; /* Center image */
+}
+
+
+.frame-container {
+      display: flex;
+      align-items: stretch;
+      margin: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Left photo */
+    .frame-left {
+      flex: 1;
+      background: #000;
+    }
+
+    .frame-left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Right text */
+    .frame-right {
+      flex: 1;
+      background: #fff;
+      padding: 30px;
+      padding-top: 111px;
+      padding-left: 20px;
+    }
+
+    .frame-right h3 {
+      font-size: 18px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .frame-right p {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+      margin: 15px 0;
+    }
+
+    .frame-right .point {
+      font-size: 15px;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+
+    /* icons ko thoda bold dikhane ke liye */
+    .icon {
+      font-size: 18px;
+    }
+
+
+
+
+
+
+
+
+/* Mobile-First Responsive Design */
+@media (max-width: 991.98px) {
+  .container {
+    padding: 15px;
+  }
+
+  .row {
+    flex-direction: column-reverse; /* Image comes after text on mobile */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-text {
+    padding: 20px 15px;
+    width: 100%;
+  }
+
+  .about-text h5 {
+    font-size: 24px; /* Slightly smaller on mobile */
+    margin-bottom: 15px;
+  }
+
+  .about-text p {
+    font-size: 15px; 
+    margin-bottom: 25px;
+  }
+
+
+  .container img {
+    max-width: 90%; 
+    margin-bottom: 15px;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .row {
+    align-items: center;
+  }
+  
+  .about-text {
+    text-align: left;
+    padding-left: 50px;
+  }
+  
+  
+}
+
+
+
+
+

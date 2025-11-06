@@ -1,0 +1,144 @@
+<article class="post-wrap">
+  <!-- Breadcrumb/meta -->
+  <p class="eyebrow">{{ category }} • {{ date }}</p>
+
+  <!-- Hero -->
+  <header class="hero" [style.--hero]=" 'url(' + hero + ')'" role="img"
+          [attr.aria-label]="title">
+    <h1 class="title">{{ title }}</h1>
+  </header>
+
+  <!-- Body -->
+  <section class="content">
+    <p class="lead">
+      Google has been investing a lot in new ways to add intelligence to devices such as headsets,
+      controllers and sensors. Whether it’s publishing open research or building helpful products,
+      we’re committed to making AI helpful for everyone.
+    </p>
+
+    <p *ngFor="let p of paragraphs">{{ p }}</p>
+
+    <!-- Pull quote -->
+    <blockquote class="pull-quote">
+      “{{ quote }}”
+    </blockquote>
+
+    <!-- Inline image/figure -->
+    <figure class="inline-figure">
+      <img [src]="figure.src" [alt]="figure.alt" loading="lazy" />
+      <figcaption>{{ figure.caption }}</figcaption>
+    </figure>
+
+    <p>
+      We’re excited by the potential of generative AI, and the opportunities it will unlock—from
+      lightweight creative workflows to highly personalized experiences. Businesses and governments
+      alike can adopt new guardrails to ensure safe deployments that benefit everyone.
+    </p>
+    <p>
+        More than 3 billion people already benefit from AI-powered features in Google Workspace, whether it’s using Smart Compose in Gmail or auto-generated summaries in Google Docs. Now, we’re excited to take the next step and bring a limited set of trusted testers a new set of features that makes the process of writing even easier. In Gmail and Google Docs, you can simply type in a topic you’d like to write about, and a draft will be instantly generated for you. So if you’re a manager onboarding a new employee, Workspace saves you the time and effort involved in writing that first welcome email. From there, you can elaborate upon or abbreviate the message or adjust the tone to be more playful or professional — all in just a few clicks. We’ll be rolling out these new experiences to testers in the coming weeks.
+    </p>
+    <p>
+        We’re now at a pivotal moment in our AI journey. Breakthroughs in generative AI are fundamentally changing how people interact with technology — and at Google, we’ve been responsibly developing large language models so we can safely bring them to our products. Today, we’re excited to share our early progress. Developers and businesses can now try new APIs and products that make it easy, safe and scalable to start building with Google’s best AI models through Google Cloud and a new prototyping environment called MakerSuite. And in Google Workspace, we’re introducing new features that help people harness the power of generative AI to create, connect and collaborate.
+    </p>
+    <p>
+        What AI adds to VR
+Personalized difficulty, pacing, and learning paths that adapt in real time using machine learning, improving engagement and outcomes in training and education.
+
+Natural interactions via speech, gesture, gaze, and intent recognition, enabling lifelike NPCs/assistants that converse and react appropriately.
+
+Generative worldbuilding and assets where AI creates 3D scenes, props, and scenarios on demand, speeding content production and enabling dynamic story branches.
+
+Key 2025 trends
+Lighter headsets with higher‑res displays, better passthrough, and on‑device AI accelerating perception and personalization; examples include new standalone devices emphasized in 2025 trend roundups.
+
+Enterprise adoption for skills training, remote collaboration, and design reviews, with measurable gains in retention and engagement versus traditional formats.
+
+AI‑XR convergence: multimodal assistants on headsets/glasses handle recognition, translation, and guidance, pointing to mainstream use cases within five years.
+
+Impact in healthcare
+Generative AI produces realistic virtual patients and surgical scenarios, enabling repeated, risk‑free practice and assessment while improving competence.
+
+Medical schools and hospitals report improved knowledge retention and engagement in VR training cohorts, with collaborative virtual classrooms and shared 3D content.
+
+Emerging AI‑XR applications target mental health and therapy with personalized, adaptive environments that respond to user signals.
+
+Enterprise training and collaboration
+Manufacturers, aviation, and automotive use AI‑driven VR for procedure training, safety drills, and digital twin walkthroughs, supporting distributed teams in real time.
+
+AI assistants inside VR help annotate 3D data, translate speech, summarize meetings, and recommend next actions, raising productivity in design and operations.
+
+Design and content creation
+Generative tools convert text prompts into 3D assets, animations, and scene layouts, shrinking production cycles and enabling small teams to ship rich content.
+
+Adaptive storytelling systems modify environment, NPC behavior, and challenge curves on the fly based on player/learner signals.
+
+Risks and considerations
+Safety and ethics: guardrails are needed for biased or inaccurate generative outputs and for data collected from speech, gaze, and biometrics.
+
+Sickness and UX: AI can help predict and mitigate discomfort (e.g., dynamic reprojection and motion tuning) but must be carefully validated with users.
+
+Interoperability: enterprises benefit from standards for assets, avatars, and identity so AI‑generated content moves across platforms.
+
+What to build next
+Skill training modules that personalize assessment and remediation using AI, with analytics dashboards for managers and educators.
+
+AI copilots embedded in VR collaboration spaces for real‑time translation, note‑taking, and action extraction across global teams.
+
+Generative scene builders where SMEs describe a scenario and the system assembles a validated, reusable training environment.
+
+A thoughtful blend of VR presence and AI intelligence is shifting immersive tech from fixed demos to continuously learning systems—with clearest gains in training, healthcare, and collaborative design, and strong momentum through 2025.
+    </p>
+  </section>
+
+
+
+<section class="popular-header">
+  <h2 class="Related-Post">Related Post </h2>
+
+  <a class="view-all" href="#">
+    View All
+  </a>
+</section>
+
+
+  
+  <div class="grid">
+    <article class="card" *ngFor="let b of blogs">
+<a [href]="b.link" class="image-link" [attr.aria-label]="b.title">
+
+        <img [src]="b.image" [alt]="b.title" loading="lazy" />
+      </a>
+
+      <div class="meta-row">
+        <span class="category">{{ b.category }}</span>
+        <span class="dot">•</span>
+        <span class="date">{{ b.date }}</span>
+      </div>
+
+      <h3 class="card-title">
+        <a [href]="b.link">{{ b.title }}</a>
+      </h3>
+
+      <p class="excerpt">{{ b.excerpt }}</p>
+
+      <a class="read-more" [href]="b.link">Read More…</a>
+    </article>
+  </div>
+
+
+
+  
+<div class="section-container">
+    <h1>Ready To Use Our App With No <br> Hidden Malware</h1>
+    <p>Etiam euismod volutpat lacus fringilla henr. Mauris lobortis purus velit quis. 
+       Nunc mollis venenatis metus nec aliquet.</p>
+    <div class="signin">
+      Already a member? <a href="#">Sign In</a>
+    </div>
+    <div class="form-box">
+      <input type="email" placeholder="Enter your email address">
+      <button>Try Free</button>
+    </div>
+  </div>
+
+  <app-footer></app-footer>

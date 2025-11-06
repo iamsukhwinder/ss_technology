@@ -1,0 +1,139 @@
+<section class="chat-wrap">
+  <div class="left">
+    <p class="eyebrow">Let’s Have a chat</p>
+    <h2 class="title">An expert at your <span class="hl">services</span></h2>
+
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate class="form">
+
+      <label class="field">
+        <span>Your name</span>
+        <input
+          name="name"
+          type="text"
+          placeholder="Your Full Name"
+          required
+          minlength="2"
+          [(ngModel)]="model.name"
+          #name="ngModel" />
+        <small class="err" *ngIf="form.submitted && name.invalid">Name is required</small>
+      </label>
+
+      <label class="field">
+        <span>Your Email</span>
+        <input
+          name="email"
+          type="email"
+          placeholder="Your email"
+          required
+          email
+          [(ngModel)]="model.email"
+          #email="ngModel" />
+        <small class="err" *ngIf="form.submitted && email.invalid">Valid email required</small>
+      </label>
+
+      <label class="field">
+        <span>Your Phone Number</span>
+        <input
+          name="phone"
+          type="tel"
+          placeholder="Your Phone Number"
+          required
+          pattern="^[0-9+\-\s()]{7,}$"
+          [(ngModel)]="model.phone"
+          #phone="ngModel" />
+        <small class="err" *ngIf="form.submitted && phone.invalid">Valid phone required</small>
+      </label>
+
+      <label class="field">
+        <span>Messages</span>
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="About: What do you want to Talk?"
+          required
+          [(ngModel)]="model.message"
+          #message="ngModel"></textarea>
+        <small class="err" *ngIf="form.submitted && message.invalid">Message is required</small>
+      </label>
+
+      <button class="btn" type="submit" [disabled]="form.invalid">Send me massage</button>
+    </form>
+  </div>
+
+  <div class="right">
+  <button class="btn" type="button" (click)="locate()">Use my current location</button>
+  <p class="status">{{ status }}</p>
+
+  <iframe
+    *ngIf="mapSrc"
+    class="map"
+    [src]="mapSrc"
+    loading="eager"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="My current location">
+  </iframe>
+</div>
+
+</section>
+
+
+<section class="faq-wrap">
+    <div class="warp">
+  <h2 class="title">Frequently asked questions</h2>
+  <p class="subtitle">
+    Would you like brief, professional answers for each FAQ? These can be used right away on a website’s FAQ section.
+  </p></div>
+
+  <ul class="faq-list">
+    <li class="item" *ngFor="let f of faqs; let i = index">
+      <button class="head" type="button" (click)="toggle(i)" [attr.aria-expanded]="!!f.open">
+        <span class="q">{{ f.q }}</span>
+        <span class="chev" [class.open]="f.open">▾</span>
+      </button>
+
+      <div class="body" [class.open]="f.open">
+        <p class="a">{{ f.a }}</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<div class="contact-section">
+  <div class="contact-header">
+    <p class="contact-subtitle">Contact Info</p>
+    <h2 class="contact-title">We are always <br /> happy to assist you</h2>
+  </div>
+
+  <div class="contact-details">
+    <!-- Email -->
+    <div class="contact-card">
+      <h4>Email Address</h4>
+      <p class="highlight">helpinfo.com</p>
+      <p class="assist">Assistance hours:<br /> Monday - Friday 6 am to 8 pm EST</p>
+    </div>
+
+    <!-- Phone -->
+    <div class="contact-card">
+      <h4>Number</h4>
+      <p class="highlight">(808) 998-34256</p>
+      <p class="assist">Assistance hours:<br /> Monday - Friday 6 am to 8 pm EST</p>
+    </div>
+  </div>
+</div>
+
+
+  
+<div class="section-container">
+    <h1>Ready To Use Our App With No <br> Hidden Malware</h1>
+    <p>Etiam euismod volutpat lacus fringilla henr. Mauris lobortis purus velit quis. 
+       Nunc mollis venenatis metus nec aliquet.</p>
+    <div class="signin">
+      Already a member? <a href="#">Sign In</a>
+    </div>
+    <div class="form-box">
+      <input type="email" placeholder="Enter your email address">
+      <button>Try Free</button>
+    </div>
+  </div>
+
+<app-footer></app-footer>
