@@ -80,6 +80,17 @@ heading = 'Find our all blogs from here';
         'Organically grow the holistic world view of disruptive innovation via workplace diversity.',
       image: 'Assets/dance.jpg',
       link: '/blog/3'
+    },
+    
+    {
+      id: 4,
+      category: 'Sports',
+      date: '10 March 2023',
+      title: 'How to Be a Dancer in 2023 with proper skills?',
+      excerpt:
+        'Organically grow the holistic world view of disruptive innovation via workplace diversity.',
+      image: 'Assets/dance.jpg',
+      link: '/blog/3'
     },]
   
 }
