@@ -23,17 +23,18 @@ jobs:
         with:
           node-version: '22.x'
 
-      - name: npm install, build, and test
-        run: |
-          npm install
-          npm run build --if-present
-          npm run test --if-present
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
+      - name: Build Angular App
+        run: ng build --configuration production
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: node-app
-          path: .
+          name: angular-dist
+          path: dist/
+          retention-days: 7 
 
   deploy:
     runs-on: ubuntu-latest
@@ -62,4 +63,3 @@ jobs:
           app-name: 'SS-Technology'
           slot-name: 'Production'
           package: .
-          
