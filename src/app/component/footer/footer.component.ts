@@ -9,6 +9,6 @@ import { APP_CONSTANTS } from '../../utility/app.constant';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  companyName = APP_CONSTANTS.COMPANY_NAME;
+  companyName = APP_CONSTANTS;
 
 }
