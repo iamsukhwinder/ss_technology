@@ -388,3 +388,132 @@
   background: #2663eb;
   color: #fff;
 }
+
+
+/* MOBILE VIEW */
+@media (max-width: 480px) {
+
+  /* ------- Services Section Top ------- */
+  .services-section {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .services-section h2 {
+    font-size: 28px;
+  }
+
+  .services-section p {
+    font-size: 14px;
+  }
+
+  .services-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn-talk {
+    width: 100%;
+  }
+
+  .projects-link {
+    font-size: 14px;
+  }
+
+
+  /* ------- Process Section ------- */
+  .process-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .process-right {
+    font-size: 16px;
+    padding-top: 0;
+  }
+
+  .process-left .title {
+    font-size: 26px;
+  }
+
+  /* Steps (Flow) */
+  .process-flow {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .step {
+    padding-inline: 0;
+  }
+
+  .curve {
+    display: none;
+  }
+
+
+  /* ------- Content Section ------- */
+  .content-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .video-container {
+    max-width: 100%;
+  }
+
+  .text-container {
+    max-width: 100%;
+  }
+
+  .text-container h2 {
+    font-size: 22px;
+  }
+
+
+  /* ------- Services Rows (Image + Text Rows) ------- */
+  .service-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .service-text h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .service-text p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .service-image img {
+    width: 100%;
+  }
+
+
+  /* ------- Testimonial Section ------- */
+  .testimonial-section {
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+  }
+
+  .testimonial-nav {
+    gap: 10px;
+  }
+}
