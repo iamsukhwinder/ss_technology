@@ -12,6 +12,19 @@ import { APP_CONSTANTS } from '../../utility/app.constant';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  companyName = APP_CONSTANTS.COMPANY_NAME;
+  companyName = APP_CONSTANTS;
+
+  menuOpen = false;
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  ngOnInit(): void {
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.main-header') as HTMLElement;
+    header.classList.toggle('scrolled', window.scrollY > 50);
+  });
+}
 
 }

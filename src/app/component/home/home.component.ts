@@ -14,7 +14,7 @@ import { APP_CONSTANTS } from '../../utility/app.constant';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  companyName = APP_CONSTANTS.COMPANY_NAME;
+  companyName = APP_CONSTANTS;
   
   constructor(private router: Router) { }   
 
