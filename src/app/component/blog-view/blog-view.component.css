@@ -1,7 +1,8 @@
 /* Layout container */
 .post-wrap {
-  max-width: 1000px;
-  margin: 0 auto;
+  margin-block: 80px;
+  max-width: 100%;
+  /* margin-inline: 1; */
   padding: clamp(16px, 4vw, 32px);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: #0f172a;

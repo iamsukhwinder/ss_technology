@@ -1,9 +1,9 @@
-name: Build Angular App
+name: Build & Deploy Angular to Azure Web App
 
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:   # 👈 allows manual trigger
+  workflow_dispatch:
 
 jobs:
   build:
@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -27,8 +27,36 @@ jobs:
       - name: Build Angular App
         run: ng build --configuration production
 
-      - name: Upload dist folder as artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
         with:
           name: angular-dist
           path: dist/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      id-token: write #This is required for requesting the JWT
+      contents: read #This is required for actions/checkout
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: angular-dist
+      
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_D2B33307C1E44C93A5A3B806A1BCF9C3 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_18C4755A00184CB9AB1DE79072130656 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4E3D89A6F4A04C8EB3A9DD2C46CF37F0 }}
+
+      - name: 'Deploy to Azure Web App'
+        uses: azure/webapps-deploy@v3
+        id: deploy-to-webapp
+        with:
+          app-name: 'SS-Technology'
+          slot-name: 'Production'
+          package: ./agency-project/browser
