@@ -1,11 +1,12 @@
 /* Section spacing and heading */
 .blogs-wrap {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 50px auto; /* Updated margin */
   padding: clamp(20px, 6vw, 64px) clamp(16px, 5vw, 32px);
   color: #0f172a;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
+
 
 /* Small label above H2 */
 .eyebrow {
