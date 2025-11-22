@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { FooterComponent } from '../footer/footer.component';
+import { ContactUsModel } from '../../models/contact-us.model';
+import { ContactUsService } from '../../services/contact-us.service';
 
 
 interface Faq {
@@ -19,16 +21,32 @@ interface Faq {
 })
 export class ContactUsComponent {
   model = { name: '', email: '', phone: '', message: '' };
-
+  contactUsModedel: ContactUsModel = new ContactUsModel;
   status = '';
   mapSrc: SafeResourceUrl | null = null;
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer,
+    private contactUsService: ContactUsService
+  ) {}
 
   onSubmit(f: NgForm) {
     if (f.valid) {
       console.log('Submit:', this.model);
-      f.resetForm();
+      this.contactUsModedel = f.value;
+      console.log('ContactUsModel:', this.contactUsModedel);
+      this.contactUsService.sendMessage(this.contactUsModedel).subscribe({
+      next: response => {
+        f.resetForm();
+        // this.successMsg = 'Message sent successfully.';
+        // this.model = new ContactUsModel(); // reset form model
+      },
+      error: err => {
+        // this.errorMsg = err?.error?.message || err?.message || 'Failed to send message';
+      },
+      complete: () => {
+        f.resetForm();
+      }
+    });      
     }
   }
 
