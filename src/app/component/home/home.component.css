@@ -352,7 +352,7 @@ margin-top: 60px
 
 
   .highlight {
-    background: linear-gradient(90deg, #2C07FF, #000E3B);
+    background: linear-gradient(90deg, #2C07FF, #344b94);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
